@@ -4,7 +4,7 @@ set(PROJECT_NAME basealttask)
 
 
 set(LIBRARY_OUTPUT_PATH usr/lib64)
-file(COPY include DESTINATION usr)
+file(COPY include DESTINATION usr/${PROJECT_NAME})
 
 project(${PROJECT_NAME})
 
