@@ -1,6 +1,5 @@
 #include "get.hpp"
 #include <curl/curl.h>
-#include <iostream>
 
 std::string BasealtTask::Get(const std::string& url) {
     std::string response;
