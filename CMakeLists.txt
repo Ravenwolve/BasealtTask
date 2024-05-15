@@ -12,10 +12,13 @@ list(APPEND CMAKE_FIND_LIBRARY_SUFFIXES ".so.4")
 
 find_package(CURL REQUIRED)
 
+
 add_library(
     ${PROJECT_NAME} SHARED
     src/get.cpp
 )
+
+set(LD_LIBRARY_PATH /usr/lib64)
 
 include_directories(${CURL_INCLUDE_DIR})
 
