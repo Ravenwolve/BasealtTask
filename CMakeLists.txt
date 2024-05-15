@@ -1,27 +1,26 @@
 cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 
-set(PROJECT_NAME basealttask)
-
-
-set(LIBRARY_OUTPUT_PATH usr/lib64)
-file(COPY include DESTINATION usr/${PROJECT_NAME})
+set(PROJECT_NAME basealttaskcli)
 
 project(${PROJECT_NAME})
 
-list(APPEND CMAKE_FIND_LIBRARY_SUFFIXES ".so.4")
+find_package(nlohmann_json REQUIRED)
 
-find_package(CURL REQUIRED)
-
-add_library(
-    ${PROJECT_NAME} SHARED
-    src/get.cpp
+add_executable(
+    ${PROJECT_NAME}
+    src/main.cpp
 )
 
-include_directories(${CURL_INCLUDE_DIR})
+include_directories(/usr/include)
 
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE /usr/include)
 target_include_directories(${PROJECT_NAME} PRIVATE src)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE ${CURL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PRIVATE /usr/lib64/libbasealttask.so)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
+
+# target_link_libraries(${PROJECT_NAME} PRIVATE /usr/lib64/libjsoncpp.so)
+
 
 target_compile_options(${PROJECT_NAME} PRIVATE -std=c++20)
