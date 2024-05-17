@@ -1,0 +1,36 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+//                          -- ABOUT --
+//
+// BasealtTask utility (x86-64 Linux) performs next functions: 
+// 
+// 1. The utility gets lists of binary packages from two branches of ALT repository
+// 
+// 2. The utility makes a comparision of received lists and makes json output to stream (console output default)
+// 
+// 3. Final json displays:
+// - all packages that are in the 1st but not in the 2nd (OuterLeft title)
+// - all packages that are in the 2nd but not in the 1st (OuterRight title)
+// - all packages whose version-release is greater in the 1st than in the 2nd
+//
+/////////////////////////////////////////////////////////////////////////////
+// 
+//                      -- BUILD REQUIREMENTS --
+//
+// 1. CMake 3.22
+// 
+// 2. CURL 4.X (libcurl-devel)
+// 
+// 3. Nlohmann-json (nlohmann-json-devel)
+//
+/////////////////////////////////////////////////////////////////////////////
+//
+//                          -- INSTALL --
+//
+// 1. Open 'Basealt' folder in terminal.
+//
+// 2. Type 'bash ./install.sh'.
+//
+// 3. Done. Type 'basealttask' and use utility.
+//
+/////////////////////////////////////////////////////////////////////////////
