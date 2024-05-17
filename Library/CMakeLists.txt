@@ -4,7 +4,7 @@ set(PROJECT_NAME basealttask)
 
 
 set(LIBRARY_OUTPUT_PATH usr/lib64)
-file(COPY include DESTINATION usr/${PROJECT_NAME})
+file(COPY include/get.hpp DESTINATION usr/include/${PROJECT_NAME})
 
 project(${PROJECT_NAME})
 
@@ -17,8 +17,6 @@ add_library(
     ${PROJECT_NAME} SHARED
     src/get.cpp
 )
-
-set(LD_LIBRARY_PATH /usr/lib64)
 
 include_directories(${CURL_INCLUDE_DIR})
 
