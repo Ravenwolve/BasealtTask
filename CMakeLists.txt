@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 
 set(PROJECT_NAME basealttask)
 
+set(EXECUTABLE_OUTPUT_PATH usr/bin)
+set(ARCHIVE_OUTPUT_DIRECTORY usr/bin)
+set(LIBRARY_OUTPUT_NAME usr/bin)
+set(RUNTIME_OUTPUT_NAME usr/bin)
+
 project(${PROJECT_NAME})
 
 find_package(nlohmann_json REQUIRED)
@@ -21,8 +26,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE src)
 target_link_libraries(${PROJECT_NAME} PRIVATE /usr/lib64/libbasealttask.so)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
-
-# target_link_libraries(${PROJECT_NAME} PRIVATE /usr/lib64/libjsoncpp.so)
-
 
 target_compile_options(${PROJECT_NAME} PRIVATE -std=c++20)

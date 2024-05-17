@@ -4,22 +4,13 @@
 #include <algorithm>
 #include <set>
 #include <thread>
-#include <future>
 #include <package.hpp>
 
 static const std::string urlHeader = "https://rdb.altlinux.org/api/export/branch_binary_packages/";
 
-void Help() {
-    
-}
-
-std::set<BasealtTask::Package> InitSet(const std::string& branch) {
-    return nlohmann::json::parse(BasealtTask::Get(urlHeader + branch))["packages"].get<std::set<BasealtTask::Package>>();
-}
-
 int main(int argc, char* argv[]) {
     if (argc == 1 || argv[1] == "help") {
-        Help();
+            std::cout << "Usage: basealttask BRANCH1 BRANCH2\n\nThe utility for comparing two binary packages from ALT Repository export branches\n\nBranch example:\np9, p10, sisyphus\n\nCommand example:\nbasealttask p9 p10\n\n";
     }
     else if (argc != 3) {
         std::cout << "It is required to specify 2 branches!\n";
