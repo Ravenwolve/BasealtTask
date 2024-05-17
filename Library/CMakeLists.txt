@@ -25,4 +25,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE src)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE ${CURL_LIBRARIES})
 
-target_compile_options(${PROJECT_NAME} PRIVATE -std=c++20)
+target_compile_options(${PROJECT_NAME} PRIVATE -std=c++14)
