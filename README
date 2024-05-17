@@ -17,7 +17,7 @@
 // 
 //                      -- BUILD REQUIREMENTS --
 //
-// 1. CMake 3.22
+// 1. CMake 3.10+
 // 
 // 2. CURL 4.X (libcurl-devel)
 // 
@@ -29,7 +29,7 @@
 //
 // 1. Open 'Basealt' folder in terminal.
 //
-// 2. Type 'bash ./install.sh'.
+// 2. Type 'bash ./install.sh Release'.
 //
 // 3. Done. Type 'basealttask' and use utility.
 //
