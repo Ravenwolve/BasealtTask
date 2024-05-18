@@ -1,2 +1,2 @@
 cd build
-sudo cp -a usr /
+cp -a usr /

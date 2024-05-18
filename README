@@ -15,7 +15,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 // 
-//                      -- BUILD REQUIREMENTS --
+//                      -- BUILD REQUIREMENTS AND DEPENDENCIES --
 //
 // 1. CMake 3.10+
 // 
@@ -29,7 +29,7 @@
 //
 // 1. Open 'Basealt' folder in terminal.
 //
-// 2. Type 'bash ./install.sh Release'.
+// 2. Type 'bash ./install.sh Release' ('root' access required (on Ubuntu with sudo)).
 //
 // 3. Done. Type 'basealttask' and use utility.
 //

@@ -7,6 +7,8 @@ set(ARCHIVE_OUTPUT_DIRECTORY usr/bin)
 set(LIBRARY_OUTPUT_NAME usr/bin)
 set(RUNTIME_OUTPUT_NAME usr/bin)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+
 project(${PROJECT_NAME})
 
 find_package(nlohmann_json REQUIRED)
