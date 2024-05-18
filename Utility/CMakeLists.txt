@@ -27,4 +27,4 @@ target_link_libraries(${PROJECT_NAME} PRIVATE /usr/lib64/libbasealttask.so)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
 
-target_compile_options(${PROJECT_NAME} PRIVATE -std=c++17)
+target_compile_options(${PROJECT_NAME} PRIVATE -std=c++14)

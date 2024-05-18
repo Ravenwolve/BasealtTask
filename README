@@ -19,9 +19,9 @@
 //
 // 1. CMake 3.10+
 // 
-// 2. CURL 4.X (libcurl-devel)
+// 2. CURL 4.X+ (libcurl-devel)
 // 
-// 3. Nlohmann-json (nlohmann-json-devel)
+// 3. Nlohmann-json 3.10.Х+ (nlohmann-json-devel)
 //
 /////////////////////////////////////////////////////////////////////////////
 //
